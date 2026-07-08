@@ -1,8 +1,20 @@
 ﻿# ACP Change Log
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
+
+## 2026-07-08 - ACP 1.0.1 external-reference clarification
+
+- Added the external-reference principle.
+- Clarified that the ACP repository is the single source of truth for collaboration protocol.
+- Clarified that ACP owns `co-ai/`.
+- Clarified that normal project repositories own `co-project/` and should reference ACP externally.
+- Clarified that normal projects no longer need local `co-ai/` copies by default.
+- Updated README adoption guidance to show a normal project structure without `co-ai/`.
+- Updated workflow phases to start with reading the ACP repository.
+- Updated project metadata to record ACP 1.0.1 as a patch-level clarification.
+- No redesign of the core protocol was performed.
 
 ## 2026-07-08 - ACP self-management milestone
 

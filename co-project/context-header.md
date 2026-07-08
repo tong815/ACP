@@ -1,6 +1,6 @@
 ﻿# ACP Context Header
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
 
@@ -14,15 +14,22 @@ A reusable AI Collaboration Protocol that separates semantic reasoning from impl
 
 ## Current Phase
 
-ACP 1.0
+ACP 1.0.1
 
 ## Current Status
 
-Stable
+Stable patch clarification
 
 ## Current Repository Role
 
-ACP is now self-managed using ACP. This repository contains the reusable `co-ai/` protocol template and the `co-project/` metadata that describes ACP itself.
+ACP is the protocol source of truth. This repository owns the reusable `co-ai/` protocol files and also keeps `co-project/` metadata because ACP is self-managed using ACP.
+
+## External-Reference Model
+
+- ACP is the protocol source.
+- Normal projects reference ACP externally.
+- Normal projects keep only `co-project/` metadata by default.
+- Normal projects should not copy `co-ai/` unless they intentionally vendor or pin a protocol version.
 
 ## Source of Truth
 
@@ -30,17 +37,18 @@ Repository state and Metadata are the source of truth. Previous conversations sh
 
 ## Startup Order
 
-1. Read `co-ai/protocol.md`.
-2. Read `co-ai/workflow.md`.
-3. Read `co-ai/metadata-spec.md`.
-4. Read the role-specific rules in `co-ai/semantic-agent-rules.md` or `co-ai/implementation-agent-rules.md`.
-5. Read this `co-project/` metadata.
-6. Inspect only the repository files relevant to the requested task.
+1. Read the ACP repository protocol files in `co-ai/`.
+2. Read the target project repository.
+3. Read the target project's `co-project/` metadata.
+4. Inspect only the repository files relevant to the requested task.
+5. Design, implement, validate, and update metadata according to ACP.
 
 ## Important Boundaries
 
 - Do not redesign ACP unless explicitly asked.
-- Reusable protocol rules live in `co-ai/`.
-- ACP-specific project metadata lives in `co-project/`.
+- Do not remove `co-ai/` from the ACP repository.
+- Do not delete ACP's own `co-project/` metadata.
+- Reusable protocol rules live in ACP's `co-ai/`.
+- Project-specific metadata lives in each project's `co-project/`.
 - Small adoption examples live in `examples/`.
 - ChatGPT and Codex may appear only as compatibility examples; ACP remains model-independent.

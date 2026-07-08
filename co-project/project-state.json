@@ -1,23 +1,26 @@
 ﻿{
-  "acpVersion": "1.0",
+  "acpVersion": "1.0.1",
   "lastUpdated": "2026-07-08",
   "project": {
     "name": "ACP",
     "purpose": "A reusable AI Collaboration Protocol that separates semantic reasoning from implementation while keeping repository metadata synchronized.",
-    "currentPhase": "ACP 1.0",
-    "currentStatus": "Stable",
+    "currentPhase": "ACP 1.0.1",
+    "currentStatus": "Stable patch clarification",
     "isSelfManagedWithACP": true,
     "referenceImplementation": true
   },
   "sourceOfTruth": {
     "primary": "Repository state and Metadata",
+    "protocolSource": "https://github.com/tong815/ACP",
+    "externalReferenceModel": "ACP repository owns co-ai. Project repositories own co-project and reference ACP externally by default.",
     "conversationDependency": "Previous conversations are not required to continue work."
   },
   "architecture": {
     "reusableProtocol": "co-ai",
     "projectMetadata": "co-project",
     "examples": "examples",
-    "publicEntryPoint": "README.md"
+    "publicEntryPoint": "README.md",
+    "normalProjectDefault": "Normal projects keep co-project and reference ACP externally instead of copying co-ai."
   },
   "activeFiles": [
     "README.md",
@@ -40,16 +43,17 @@
     "semanticAgent": "Owns semantic analysis, reasoning, dependency analysis, concept design, and Knowledge Model structure.",
     "implementationAgent": "Owns repository updates, validation, Metadata maintenance, serialization, and code generation."
   },
-  "currentMilestone": "ACP became its own first ACP-managed repository.",
+  "currentMilestone": "ACP 1.0.1 clarified the external-reference model: ACP owns co-ai, projects own co-project.",
   "validationStatus": {
     "metadataSynchronized": true,
     "architectureMatchesRepository": true,
     "jsonMetadataValid": true,
-    "internalReferencesUseCurrentPaths": true
+    "internalReferencesUseCurrentPaths": true,
+    "externalReferenceModelDocumented": true
   },
   "knownRisks": [
     "No automated Markdown link checker is configured.",
-    "Future adopters may need starter templates for blank co-project metadata files."
+    "Projects that already copied co-ai may need to decide whether to remove the local copy or treat it as an intentional pinned protocol version."
   ],
-  "nextExpectedTask": "Maintain ACP metadata whenever the reusable protocol, repository structure, examples, or release status changes."
+  "nextExpectedTask": "Maintain ACP metadata whenever the reusable protocol, external-reference guidance, repository structure, examples, or release status changes."
 }

@@ -1,15 +1,20 @@
 ﻿# ACP Implementation Report
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
 
 ## Summary
 
-ACP is now represented as an ACP-managed project. The `co-project/` metadata has been rewritten to describe the ACP repository itself instead of a previous project.
+ACP 1.0.1 adds a patch-level clarification for the external-reference model. ACP remains the single source of truth for collaboration protocol, and normal projects should reference ACP externally while maintaining their own `co-project/` metadata.
+
+No redesign of the core protocol was performed.
 
 ## Files Updated
 
+- `README.md`
+- `co-ai/protocol.md`
+- `co-ai/workflow.md`
 - `co-project/architecture.md`
 - `co-project/context-header.md`
 - `co-project/project-state.json`
@@ -21,42 +26,42 @@ ACP is now represented as an ACP-managed project. The `co-project/` metadata has
 
 The metadata now records:
 
-- Project name: ACP
-- Current phase: ACP 1.0
-- Current status: Stable
-- Purpose: reusable AI Collaboration Protocol separating semantic reasoning from implementation while keeping Metadata synchronized
-- Repository role: first reference implementation of ACP using ACP itself
-- Current structure: `README.md`, `co-ai/`, `co-project/`, and `examples/`
+- ACP Version: 1.0.1
+- Current phase: ACP 1.0.1
+- Current status: Stable patch clarification
+- External-reference principle added
+- ACP repository owns `co-ai/`
+- Normal project repositories own `co-project/`
+- Normal projects no longer need local `co-ai/` copies by default
 
 ## Architecture Verified
 
-The architecture documentation matches the current repository contents:
+ACP itself still contains both `co-ai/` and `co-project/` because it is the protocol source and first self-managed ACP repository.
+
+Normal ACP-managed projects should use this default structure:
 
 ```text
-ACP
-|-- README.md
-|-- co-ai/
+Project
 |-- co-project/
-`-- examples/
+|-- src/ or data/
+`-- ...
 ```
-
-The `co-ai/` directory contains reusable protocol files. The `co-project/` directory contains ACP-specific metadata. The `examples/` directory contains intentionally small adoption examples.
 
 ## Validation Performed
 
-- Checked repository file structure.
-- Rewrote active metadata to remove stale previous-project identity.
-- Preserved intentional example references under `examples/`.
+- Confirmed `co-ai/` remains in the ACP repository.
+- Confirmed ACP's own `co-project/` remains in the ACP repository.
 - Validated `co-project/project-state.json` as JSON.
 - Validated `co-project/project-map.json` as JSON.
-- Checked internal references for final `co-ai/` file names.
-- Confirmed ACP follows its own workflow: read `co-ai/`, read `co-project/`, update repository metadata, validate, then report.
+- Checked that metadata paths reference existing files.
+- Checked internal references for the external-reference model and current `co-ai/` file names.
+- Confirmed the update is a patch-level clarification, not a protocol redesign.
 
 ## Remaining Future Improvements
 
-- Add optional starter templates for empty `co-project/` files if future adopters need copy-ready scaffolds.
-- Add automated Markdown link checking if the repository grows beyond a small documentation protocol.
+- Add an adoption template for creating a new project `co-project/` without copying `co-ai/`.
+- Add automated Markdown link checking if the documentation set grows.
 
 ## Known Risks
 
-- The repository currently has no automated documentation test suite. Validation is performed with repository scans and JSON parsing.
+- Existing projects that copied `co-ai/` may need manual cleanup or a decision to treat their local copy as an intentional pinned version.

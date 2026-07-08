@@ -1,35 +1,45 @@
 ﻿{
-  "acpVersion": "1.0",
+  "acpVersion": "1.0.1",
   "lastUpdated": "2026-07-08",
   "project": {
     "id": "ACP",
     "name": "AI Collaboration Protocol",
     "purpose": "A reusable AI Collaboration Protocol that separates semantic reasoning from implementation while keeping repository metadata synchronized.",
-    "phase": "ACP 1.0",
-    "status": "Stable"
+    "phase": "ACP 1.0.1",
+    "status": "Stable patch clarification"
+  },
+  "externalReferenceModel": {
+    "protocolSource": "https://github.com/tong815/ACP",
+    "principle": "ACP repository owns co-ai. Normal project repositories own co-project and reference ACP externally by default.",
+    "normalProjectStructure": [
+      "co-project/",
+      "src/ or data/",
+      "..."
+    ],
+    "localCoAiCopyDefault": false
   },
   "components": [
     {
       "id": "README",
       "path": "README.md",
       "type": "public-entry-point",
-      "purpose": "Explains what ACP is, how to adopt it, required metadata files, and the generic agent roles."
+      "purpose": "Explains what ACP is, how to adopt it through external reference, required metadata files, and the generic agent roles."
     },
     {
       "id": "CO_AI",
       "path": "co-ai/",
-      "type": "reusable-protocol",
-      "purpose": "Reusable ACP protocol template copied into repositories that adopt ACP.",
+      "type": "reusable-protocol-source",
+      "purpose": "Reusable ACP protocol files owned by the ACP repository and referenced externally by normal projects.",
       "children": [
         {
           "id": "CO_AI_PROTOCOL",
           "path": "co-ai/protocol.md",
-          "purpose": "Defines ACP mission, scope, semantic ownership, roles, and startup order."
+          "purpose": "Defines ACP mission, scope, semantic ownership, roles, startup order, and external-reference principle."
         },
         {
           "id": "CO_AI_WORKFLOW",
           "path": "co-ai/workflow.md",
-          "purpose": "Defines the general ACP workflow and includes the PDF workflow as an intentional example."
+          "purpose": "Defines the default ACP working order and an example content workflow."
         },
         {
           "id": "CO_AI_METADATA_SPEC",
@@ -57,7 +67,7 @@
         {
           "id": "CO_PROJECT_ARCHITECTURE",
           "path": "co-project/architecture.md",
-          "purpose": "Documents the current ACP repository architecture."
+          "purpose": "Documents the current ACP repository architecture and external-reference model."
         },
         {
           "id": "CO_PROJECT_CONTEXT_HEADER",
@@ -117,6 +127,10 @@
         "label": "Repository state and Metadata are the source of truth"
       },
       {
+        "id": "ACP_EXTERNAL_PROTOCOL_REFERENCE",
+        "label": "Projects reference the ACP repository externally for protocol guidance"
+      },
+      {
         "id": "ACP_SEMANTIC_AGENT",
         "label": "Semantic Agent owns semantic reasoning and Knowledge Model design"
       },
@@ -126,11 +140,11 @@
       },
       {
         "id": "ACP_REUSABLE_PROTOCOL",
-        "label": "co-ai contains reusable protocol rules"
+        "label": "ACP repository co-ai contains reusable protocol rules"
       },
       {
         "id": "ACP_PROJECT_METADATA",
-        "label": "co-project contains project-specific metadata"
+        "label": "Project repositories contain project-specific co-project metadata"
       }
     ]
   }

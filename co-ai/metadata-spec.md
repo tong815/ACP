@@ -1,6 +1,6 @@
 ﻿# Project Metadata Specification
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
 

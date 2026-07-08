@@ -1,6 +1,6 @@
 ﻿# Semantic Agent Rules
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
 
@@ -8,8 +8,8 @@ These rules apply to any Semantic Agent. ChatGPT is one possible Semantic Agent,
 
 ## Startup Order
 
-1. First read `co-ai/`.
-2. Then read `co-project/`.
+1. First read the ACP repository protocol.
+2. Then read the target project's `co-project/` metadata.
 3. Then inspect only relevant source files.
 
 ## Semantic Role

@@ -1,15 +1,25 @@
 ﻿# AI Collaboration Workflow
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
+
+## Default Working Order
+
+```text
+Phase 0: Read ACP repository
+Phase 1: Read project repository
+Phase 2: Read co-project metadata
+Phase 3: Read task-specific materials
+Phase 4: Design / implementation / validation according to ACP
+```
 
 ## General Workflow
 
 ```text
 Human
--> Repository
--> co-ai
+-> ACP repository
+-> Project repository
 -> co-project
 -> Semantic Agent
 -> Knowledge Model
@@ -20,12 +30,12 @@ Human
 -> Commit
 ```
 
-## SPH4U Teaching Content Workflow
+## Example Teaching Content Workflow
 
 ```text
-SPH4U PDF
--> Repository
--> co-ai
+PDF
+-> ACP repository
+-> Project repository
 -> co-project
 -> Semantic Agent semantic analysis
 -> Knowledge Model
@@ -40,8 +50,8 @@ SPH4U PDF
 ## Collaboration Notes
 
 - Human sets the goal, constraints, and acceptance criteria.
-- Repository contains the current source files and Metadata.
-- `co-ai` defines ACP rules that can be reused across repositories.
+- ACP repository defines reusable protocol rules.
+- Project repository contains the current source files and project Metadata.
 - `co-project` stores the project-specific state required by AI collaborators.
 - Semantic Agent analyzes meaning, concepts, dependencies, reasoning, and Knowledge Model structure.
 - Implementation Agent updates files, validates behavior, maintains Metadata, and prepares commits.

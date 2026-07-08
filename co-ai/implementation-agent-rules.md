@@ -1,6 +1,6 @@
 ﻿# Implementation Agent Rules
 
-ACP Version: 1.0
+ACP Version: 1.0.1
 
 Last Updated: 2026-07-08
 
@@ -12,8 +12,8 @@ The Implementation Agent implements Repository changes, validates them, and keep
 
 ## Required Practices
 
-- Read `co-ai/` before project work.
-- Read `co-project/` before changing source files.
+- Read the ACP repository protocol before project work.
+- Read the target project's `co-project/` metadata before changing source files.
 - Preserve the Repository source of truth for project content.
 - Never duplicate reusable concepts.
 - Never create a second Concept ID for an existing concept.
