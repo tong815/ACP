@@ -8,54 +8,33 @@ Last Updated: 2026-07-08
 
 ```text
 Human
-↓
-Repository
-↓
-co-ai
-↓
-co-project
-↓
-Semantic Agent
-↓
-Knowledge Model
-↓
-Implementation Agent
-↓
-Repository
-↓
-Metadata Update
-↓
-Validation
-↓
-Commit
+-> Repository
+-> co-ai
+-> co-project
+-> Semantic Agent
+-> Knowledge Model
+-> Implementation Agent
+-> Repository
+-> Metadata Update
+-> Validation
+-> Commit
 ```
 
 ## SPH4U Teaching Content Workflow
 
 ```text
 SPH4U PDF
-↓
-Repository
-↓
-co-ai
-↓
-co-project
-↓
-Semantic Agent semantic analysis
-↓
-Knowledge Model
-↓
-Implementation Agent repository update
-↓
-JSON update
-↓
-Website render
-↓
-Metadata Update
-↓
-Validation
-↓
-Commit
+-> Repository
+-> co-ai
+-> co-project
+-> Semantic Agent semantic analysis
+-> Knowledge Model
+-> Implementation Agent repository update
+-> JSON update
+-> Website render
+-> Metadata Update
+-> Validation
+-> Commit
 ```
 
 ## Collaboration Notes

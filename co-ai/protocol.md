@@ -22,13 +22,13 @@ The Human sets goals, constraints, priorities, and acceptance criteria.
 
 ### Semantic Agent
 
-The Semantic Agent owns semantic analysis, curriculum architecture, dependency analysis, reasoning, concept design, and knowledge model design.
+The Semantic Agent owns semantic analysis, curriculum architecture, dependency analysis, reasoning, concept design, and Knowledge Model design.
 
 ChatGPT is one possible Semantic Agent when it is useful to name a concrete example.
 
 ### Implementation Agent
 
-The Implementation Agent owns implementation, repository updates, validation, metadata maintenance, and code generation.
+The Implementation Agent owns implementation, repository updates, validation, Metadata maintenance, serialization, and code generation.
 
 Codex is one possible Implementation Agent when it is useful to name a concrete example.
 
@@ -44,8 +44,8 @@ Codex is one possible Implementation Agent when it is useful to name a concrete 
 
 | Folder | Purpose |
 |---|---|
-| `co-ai/` | Reusable ACP protocol files shared across repositories |
-| `co-project/` | Repository-specific metadata, project state, maps, reports, and history |
+| `co-ai/` | Reusable ACP protocol files shared across repositories. |
+| `co-project/` | Repository-specific Metadata, project state, maps, reports, and history. |
 
 ## Core Principles
 
