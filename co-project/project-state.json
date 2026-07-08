@@ -1,0 +1,55 @@
+﻿{
+  "acpVersion": "1.0",
+  "lastUpdated": "2026-07-08",
+  "project": {
+    "name": "ACP",
+    "purpose": "A reusable AI Collaboration Protocol that separates semantic reasoning from implementation while keeping repository metadata synchronized.",
+    "currentPhase": "ACP 1.0",
+    "currentStatus": "Stable",
+    "isSelfManagedWithACP": true,
+    "referenceImplementation": true
+  },
+  "sourceOfTruth": {
+    "primary": "Repository state and Metadata",
+    "conversationDependency": "Previous conversations are not required to continue work."
+  },
+  "architecture": {
+    "reusableProtocol": "co-ai",
+    "projectMetadata": "co-project",
+    "examples": "examples",
+    "publicEntryPoint": "README.md"
+  },
+  "activeFiles": [
+    "README.md",
+    "co-ai/protocol.md",
+    "co-ai/workflow.md",
+    "co-ai/metadata-spec.md",
+    "co-ai/semantic-agent-rules.md",
+    "co-ai/implementation-agent-rules.md",
+    "co-project/architecture.md",
+    "co-project/context-header.md",
+    "co-project/project-state.json",
+    "co-project/project-map.json",
+    "co-project/change-log.md",
+    "co-project/implementation-report.md",
+    "examples/physics-project/README.md",
+    "examples/exam-visualizer/README.md",
+    "examples/game-project/README.md"
+  ],
+  "agentRoles": {
+    "semanticAgent": "Owns semantic analysis, reasoning, dependency analysis, concept design, and Knowledge Model structure.",
+    "implementationAgent": "Owns repository updates, validation, Metadata maintenance, serialization, and code generation."
+  },
+  "currentMilestone": "ACP became its own first ACP-managed repository.",
+  "validationStatus": {
+    "metadataSynchronized": true,
+    "architectureMatchesRepository": true,
+    "jsonMetadataValid": true,
+    "internalReferencesUseCurrentPaths": true
+  },
+  "knownRisks": [
+    "No automated Markdown link checker is configured.",
+    "Future adopters may need starter templates for blank co-project metadata files."
+  ],
+  "nextExpectedTask": "Maintain ACP metadata whenever the reusable protocol, repository structure, examples, or release status changes."
+}

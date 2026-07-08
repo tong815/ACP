@@ -1,0 +1,137 @@
+﻿{
+  "acpVersion": "1.0",
+  "lastUpdated": "2026-07-08",
+  "project": {
+    "id": "ACP",
+    "name": "AI Collaboration Protocol",
+    "purpose": "A reusable AI Collaboration Protocol that separates semantic reasoning from implementation while keeping repository metadata synchronized.",
+    "phase": "ACP 1.0",
+    "status": "Stable"
+  },
+  "components": [
+    {
+      "id": "README",
+      "path": "README.md",
+      "type": "public-entry-point",
+      "purpose": "Explains what ACP is, how to adopt it, required metadata files, and the generic agent roles."
+    },
+    {
+      "id": "CO_AI",
+      "path": "co-ai/",
+      "type": "reusable-protocol",
+      "purpose": "Reusable ACP protocol template copied into repositories that adopt ACP.",
+      "children": [
+        {
+          "id": "CO_AI_PROTOCOL",
+          "path": "co-ai/protocol.md",
+          "purpose": "Defines ACP mission, scope, semantic ownership, roles, and startup order."
+        },
+        {
+          "id": "CO_AI_WORKFLOW",
+          "path": "co-ai/workflow.md",
+          "purpose": "Defines the general ACP workflow and includes the PDF workflow as an intentional example."
+        },
+        {
+          "id": "CO_AI_METADATA_SPEC",
+          "path": "co-ai/metadata-spec.md",
+          "purpose": "Defines required project metadata files, ownership, and update responsibilities."
+        },
+        {
+          "id": "CO_AI_SEMANTIC_AGENT_RULES",
+          "path": "co-ai/semantic-agent-rules.md",
+          "purpose": "Defines model-independent rules for Semantic Agents."
+        },
+        {
+          "id": "CO_AI_IMPLEMENTATION_AGENT_RULES",
+          "path": "co-ai/implementation-agent-rules.md",
+          "purpose": "Defines model-independent rules for Implementation Agents."
+        }
+      ]
+    },
+    {
+      "id": "CO_PROJECT",
+      "path": "co-project/",
+      "type": "project-specific-metadata",
+      "purpose": "Metadata describing ACP itself as an ACP-managed repository.",
+      "children": [
+        {
+          "id": "CO_PROJECT_ARCHITECTURE",
+          "path": "co-project/architecture.md",
+          "purpose": "Documents the current ACP repository architecture."
+        },
+        {
+          "id": "CO_PROJECT_CONTEXT_HEADER",
+          "path": "co-project/context-header.md",
+          "purpose": "Provides current orientation for AI collaborators working on ACP."
+        },
+        {
+          "id": "CO_PROJECT_STATE",
+          "path": "co-project/project-state.json",
+          "purpose": "Machine-readable current state of the ACP repository."
+        },
+        {
+          "id": "CO_PROJECT_MAP",
+          "path": "co-project/project-map.json",
+          "purpose": "Machine-readable component map for the ACP repository."
+        },
+        {
+          "id": "CO_PROJECT_CHANGE_LOG",
+          "path": "co-project/change-log.md",
+          "purpose": "Chronological record of ACP repository metadata and structure changes."
+        },
+        {
+          "id": "CO_PROJECT_IMPLEMENTATION_REPORT",
+          "path": "co-project/implementation-report.md",
+          "purpose": "Latest report describing metadata synchronization and validation."
+        }
+      ]
+    },
+    {
+      "id": "EXAMPLES",
+      "path": "examples/",
+      "type": "adoption-examples",
+      "purpose": "Small example README files showing how a co-project folder can look in different repository types.",
+      "children": [
+        {
+          "id": "EXAMPLE_PHYSICS_PROJECT",
+          "path": "examples/physics-project/README.md",
+          "purpose": "Intentional example for a physics teaching repository."
+        },
+        {
+          "id": "EXAMPLE_EXAM_VISUALIZER",
+          "path": "examples/exam-visualizer/README.md",
+          "purpose": "Intentional example for an exam visualizer repository."
+        },
+        {
+          "id": "EXAMPLE_GAME_PROJECT",
+          "path": "examples/game-project/README.md",
+          "purpose": "Intentional example for a game repository."
+        }
+      ]
+    }
+  ],
+  "semanticModel": {
+    "coreConcepts": [
+      {
+        "id": "ACP_REPOSITORY_STATE_SOURCE_OF_TRUTH",
+        "label": "Repository state and Metadata are the source of truth"
+      },
+      {
+        "id": "ACP_SEMANTIC_AGENT",
+        "label": "Semantic Agent owns semantic reasoning and Knowledge Model design"
+      },
+      {
+        "id": "ACP_IMPLEMENTATION_AGENT",
+        "label": "Implementation Agent owns repository changes and validation"
+      },
+      {
+        "id": "ACP_REUSABLE_PROTOCOL",
+        "label": "co-ai contains reusable protocol rules"
+      },
+      {
+        "id": "ACP_PROJECT_METADATA",
+        "label": "co-project contains project-specific metadata"
+      }
+    ]
+  }
+}
